@@ -1,6 +1,8 @@
 import 'package:app_lampara/config/size_config.dart';
+import 'package:app_lampara/src/screens/home_screen/home_screen.dart';
+import 'package:app_lampara/view/led_view.dart';
 import 'package:app_lampara/view/smart_light_view_model.dart';
-import 'package:app_lampara/color_picker_screen.dart';
+//import 'package:app_lampara/color_picker_screen.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
@@ -36,9 +38,11 @@ class Body extends StatelessWidget {
                         ),
                        InkWell(
                           onTap: () {
-                            Navigator.of(context).pop();
+                            Navigator.of(context).pushNamed(HomeScreen.routeName);
                           },
-                          child: const Icon(Icons.arrow_back_outlined),
+                          child: const Icon(Icons.arrow_back_outlined,
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          ),
                         ),
                         SizedBox(height: getProportionateScreenHeight(10)), // Agrega espacio aquí
                         Stack(
@@ -73,7 +77,7 @@ class Body extends StatelessWidget {
                           height: getProportionateScreenHeight(20),
                         ),
                         Text(
-                          'Colores',
+                          'Lampara',
                           style: Theme.of(context).textTheme.headlineMedium,
                         ),
                         SizedBox(
@@ -81,10 +85,10 @@ class Body extends StatelessWidget {
                         ),
                         InkWell(
                           onTap: () {
-                            Navigator.of(context).pushNamed(ColorPickerScreen.routeName);
+                            Navigator.of(context).pushNamed(MyHomePage.routeName);
                           },
                           child: Image.asset(
-                            'assets/images/color_wheel.png',
+                            'assets/images/lamp.png',
                             height: getProportionateScreenHeight(22),
                           ),
                         ),

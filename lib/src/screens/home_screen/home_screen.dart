@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
               appBar: AppBar(
                 toolbarHeight: getProportionateScreenHeight(60),
                 elevation: 0,
-                iconTheme: const IconThemeData(color: Color.fromARGB(255, 0, 0, 0)),
+                iconTheme: const IconThemeData(color: Color.fromARGB(255, 249, 249, 249)),
                 title: Padding(
                   padding: EdgeInsets.symmetric(
                     horizontal: getProportionateScreenWidth(
