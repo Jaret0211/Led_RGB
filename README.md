@@ -1,4 +1,4 @@
-# app_lampara
+# app_notificaciones
 
 A new Flutter project.
 
